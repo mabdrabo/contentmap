@@ -13,5 +13,11 @@ app = Flask(__name__, static_url_path='/static')
 def home():
 	return render_template('home.html')
 
+
+@app.route('/country', methods=['POST'])
+def country():
+	country = request.form['country']
+	return render_template('country.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
