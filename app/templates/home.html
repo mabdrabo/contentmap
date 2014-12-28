@@ -10,6 +10,15 @@
 			</div>
 		</div>
 
+		{% for r,l in results.iteritems() %}
+			<p>{{r}}</p>
+			<ul>
+				{% for i in l %}
+					<li>{{i}}</li>
+				{% endfor %}
+			</ul>
+		{% endfor %}
+
 		<script src="static/js/jquery.min.js"></script>
 		<script src="static/js/bootstrap.min.js"></script>
 	</body>
